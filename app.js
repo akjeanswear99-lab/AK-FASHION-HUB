@@ -24,3 +24,35 @@ html += `
 document.getElementById("products").innerHTML = html;
 
 });
+function addProduct(){
+
+const product = {
+
+uid: document.getElementById("uid").value,
+
+name: document.getElementById("name").value,
+
+color: document.getElementById("color").value,
+
+size: document.getElementById("size").value,
+
+price: document.getElementById("price").value,
+
+stock: document.getElementById("stock").value
+
+};
+
+fetch(API_URL,{
+method:"POST",
+body:JSON.stringify(product)
+})
+.then(res=>res.text())
+.then(msg=>{
+
+alert("Product Added");
+
+location.reload();
+
+});
+
+}
