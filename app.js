@@ -28,7 +28,6 @@ function addProduct(){
 
 const product = {
 
-uid: document.getElementById("uid").value,
 
 name: document.getElementById("name").value,
 
